@@ -5,3 +5,6 @@ Pattern: MVVM
 
 #220806
 - First Commit
+
+#220807
+- naver map has to fixed

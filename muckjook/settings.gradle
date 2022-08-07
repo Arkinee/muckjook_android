@@ -10,6 +10,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        jcenter()
+        maven{
+            url 'https://www.naver.jfrog.io/artifactory/maven/'
+        }
     }
 }
 rootProject.name = "MuckJook"
