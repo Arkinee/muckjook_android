@@ -8,3 +8,7 @@ Pattern: MVVM
 
 #220807
 - naver map has to fixed
+
+#220808
+- jeju marker not at all, part
+- map sync, ui setting

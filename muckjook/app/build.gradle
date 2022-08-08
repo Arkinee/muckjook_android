@@ -80,9 +80,8 @@ dependencies {
     implementation 'io.github.ParkSangGwon:tedpermission-rx3:3.3.0'
 
     //Naver Map
-    implementation ("com.naver.maps:map-sdk:3.15.0")
+    implementation 'com.naver.maps:map-sdk:3.15.0'
     //location
-    implementation ('com.google.android.gms.play-services:+'){exclude module: 'support-v4'}
-    implementation ("com.google.android.gms:play-services-location:20.0.0")
+    implementation 'com.google.android.gms:play-services-location:20.0.0'
 
 }
