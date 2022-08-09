@@ -7,6 +7,11 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <queries>
+        <package android:name="net.daum.android.map"/>
+        <package android:name="com.nhn.android.nmap"/>
+    </queries>
+
     <application
         android:allowBackup="false"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -28,6 +33,7 @@
         </activity>
 
         <activity android:name=".src.main.MainActivity" />
+        <activity android:name=".src.shop.ShopActivity" />
 
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"

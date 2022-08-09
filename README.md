@@ -12,3 +12,7 @@ Pattern: MVVM
 #220808
 - jeju marker not at all, part
 - map sync, ui setting
+
+#220809
+- shop info add
+- link to navermap search
