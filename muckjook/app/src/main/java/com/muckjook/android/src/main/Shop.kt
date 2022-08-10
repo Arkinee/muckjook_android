@@ -18,5 +18,6 @@ data class Shop(
     */
     var category: Int,
     var latitude: String,
-    var longitude: String
+    var longitude: String,
+    var region: String
 )

@@ -14,9 +14,6 @@ import kotlinx.coroutines.launch
 class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     var name = String
-    var category = String
-    var latitude = String
-    var longitude = String
 
     val Repository: Repository = Repository((AppDatabase.getDatabase(application, viewModelScope)))
     var allShops: LiveData<List<ShopEntity>> = Repository.allShops

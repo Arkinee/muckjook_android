@@ -9,7 +9,12 @@
 
     <string name="main_iv_info_desc">iv_info_desc</string>
     <string name="main_iv_info_navigate_desc">iv_info_navigate_desc</string>
+    <string name="home_tv_top">먹죽여지도</string>
+    <string name="main_iv_home_desc">home_description</string>
+    <string name="main_iv_mypage_desc">mypage_description</string>
 
     <string name="shop_detail_tv_top">먹죽 상세보기</string>
+
+    <string name="mypage_tv_top">마이페이지</string>
 
 </resources>

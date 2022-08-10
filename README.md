@@ -16,3 +16,6 @@ Pattern: MVVM
 #220809
 - shop info add
 - link to navermap search
+
+#220810
+- viewpager2 : home, mypage fragment added
