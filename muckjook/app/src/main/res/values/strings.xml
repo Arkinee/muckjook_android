@@ -12,6 +12,7 @@
     <string name="home_tv_top">먹죽여지도</string>
     <string name="main_iv_home_desc">home_description</string>
     <string name="main_iv_mypage_desc">mypage_description</string>
+    <string name="main_iv_search_desc">iv_search_desc</string>
 
     <string name="shop_detail_tv_top">먹죽 상세보기</string>
 

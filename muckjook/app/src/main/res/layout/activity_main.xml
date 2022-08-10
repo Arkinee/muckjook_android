@@ -18,7 +18,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/main_constraint_top"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
+            android:background="@color/colorAccent"
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
@@ -26,13 +27,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/home_tv_top"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="15sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/main_iv_search"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/main_iv_search_desc"
+                android:padding="10dp"
+                android:src="@drawable/ic_search"
+                android:onClick="@{()->main.searchClick()}"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -46,8 +58,8 @@
         <View
             android:id="@+id/main_view_border_bottom"
             android:layout_width="match_parent"
-            android:layout_height="1.5dp"
-            android:background="@color/colorViewBorder"
+            android:layout_height="1dp"
+            android:background="@drawable/src_gradient_main"
             app:layout_constraintBottom_toTopOf="@+id/main_constraint_bottom" />
 
         <androidx.constraintlayout.widget.ConstraintLayout

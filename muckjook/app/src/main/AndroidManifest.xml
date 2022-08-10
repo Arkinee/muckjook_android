@@ -33,6 +33,7 @@
         </activity>
 
         <activity android:name=".src.main.MainActivity" />
+        <activity android:name=".src.search.SearchActivity" />
         <activity android:name=".src.shop.ShopActivity" />
 
         <meta-data

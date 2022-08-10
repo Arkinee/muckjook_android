@@ -19,3 +19,5 @@ Pattern: MVVM
 
 #220810
 - viewpager2 : home, mypage fragment added
+- jeju data complete
+- search activity add

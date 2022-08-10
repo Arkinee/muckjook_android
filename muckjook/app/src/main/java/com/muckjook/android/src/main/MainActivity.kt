@@ -1,7 +1,7 @@
 package com.muckjook.android.src.main
 
+import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -14,11 +14,13 @@ import com.muckjook.android.databinding.ActivityMainBinding
 import com.muckjook.android.src.main.adapters.MainViewPagerAdapter
 import com.muckjook.android.src.main.fragments.map.MapFragment
 import com.muckjook.android.src.main.fragments.mypage.MyPageFragment
+import com.muckjook.android.src.search.SearchActivity
 
 class MainActivity : AppCompatActivity() {
 
-    val mContext = this
-    var mMenuIndex = 0
+    private val mContext = this
+    private var mMenuIndex = 0
+    private var mBackTime: Long = 0
 
     private lateinit var mBinding: ActivityMainBinding
     private val mMainModel: MainViewModel by viewModels()
@@ -51,7 +53,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun homeClick(){
+    fun homeClick() {
         mMenuIndex = 0
         mMainViewPager.currentItem = 0
 
@@ -61,12 +63,30 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun mypageClick(){
+    fun mypageClick() {
         mMenuIndex = 1
         mMainViewPager.currentItem = 1
 
         mMainMenuIvHome.setImageResource(R.drawable.icon_home_normal)
         mMainMenuIvMyPage.setImageResource(R.drawable.ic_mypage)
         mMainTvTop.setText(R.string.mypage_tv_top)
+    }
+
+    fun searchClick() {
+
+        val intent = Intent(this, SearchActivity::class.java)
+        startActivity(intent)
+
+    }
+
+    override fun onBackPressed() {
+        //super.onBackPressed()
+        if (System.currentTimeMillis() - mBackTime < 1500){
+            finish()
+            return
+        }
+
+        Toast.makeText(this, "한번 더 누르시면 앱이 종료됩니다.", Toast.LENGTH_SHORT).show()
+        mBackTime = System.currentTimeMillis()
     }
 }
