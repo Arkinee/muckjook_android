@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
         <variable
             name="main"
             type="com.muckjook.android.src.main.MainActivity" />
@@ -28,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/home_tv_top"
                 android:textColor="@color/white"
-                android:textSize="15sp"
+                android:textSize="17sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -73,7 +72,7 @@
                 android:id="@+id/main_iv_menu_home"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:contentDescription="@string/main_iv_home_desc"
+                android:contentDescription="@string/main_iv_desc"
                 android:onClick="@{()->main.homeClick()}"
                 android:padding="10dp"
                 android:src="@drawable/ic_home"
@@ -85,7 +84,7 @@
                 android:id="@+id/main_iv_menu_mypage"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:contentDescription="@string/main_iv_mypage_desc"
+                android:contentDescription="@string/mypage_iv_desc"
                 android:onClick="@{()->main.mypageClick()}"
                 android:padding="10dp"
                 android:src="@drawable/ic_mypage_normal"

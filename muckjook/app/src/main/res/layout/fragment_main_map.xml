@@ -59,7 +59,7 @@
                     android:id="@+id/main_iv_info"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:contentDescription="@string/main_iv_info_desc"
+                    android:contentDescription="@string/home_iv_desc"
                     android:src="@drawable/ic_shop_temp" />
 
             </androidx.cardview.widget.CardView>

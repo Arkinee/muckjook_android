@@ -1,21 +1,32 @@
 <resources>
-    <string name="app_name">Muck Jook</string>
-
+    <string name="app_name">먹죽</string>
     <string name="naver_client_id">50f7zr9gn6</string>
 
+    <!-- 스플래시 -->
     <string name="splash_icon_description">Muck Jook</string>
-    <string name="splash_title_1">먹고 죽은</string>
+    <string name="splash_title_1">EAT &amp; DIE</string>
     <string name="splash_title_2">녀석들</string>
 
-    <string name="main_iv_info_desc">iv_info_desc</string>
+    <!-- 메인 -->
+    <string name="main_iv_desc">main_iv_desc</string>
     <string name="main_iv_info_navigate_desc">iv_info_navigate_desc</string>
-    <string name="home_tv_top">먹죽여지도</string>
-    <string name="main_iv_home_desc">home_description</string>
-    <string name="main_iv_mypage_desc">mypage_description</string>
     <string name="main_iv_search_desc">iv_search_desc</string>
 
+    <!-- 홈(지도) -->
+    <string name="home_tv_top">먹죽여지도</string>
+    <string name="home_iv_desc">home_iv_desc</string>
+
+    <!-- 가게 상세보기 -->
     <string name="shop_detail_tv_top">먹죽 상세보기</string>
 
+    <!-- 마이페이지 -->
     <string name="mypage_tv_top">마이페이지</string>
+    <string name="mypage_iv_desc">mypage_iv_description</string>
+
+    <!-- 검색 -->
+    <string name="search_iv_desc">search_description</string>
+    <string name="search_tv_top">검색</string>
+    <string name="search_edt_hint">검색어</string>
+    <string name="search_tv_no_search">검색어를 입력해주세요.</string>
 
 </resources>

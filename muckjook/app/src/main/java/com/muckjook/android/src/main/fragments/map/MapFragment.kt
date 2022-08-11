@@ -1,8 +1,10 @@
 package com.muckjook.android.src.main.fragments.map
 
+import android.Manifest
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.location.Location
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -15,6 +17,8 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.app.ActivityCompat
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import com.google.android.gms.location.FusedLocationProviderClient
+import com.google.android.gms.location.LocationServices
 import com.muckjook.android.R
 import com.muckjook.android.src.main.MainActivity
 import com.muckjook.android.src.main.Shop
@@ -43,6 +47,7 @@ class MapFragment(context: Context) : Fragment(), OnMapReadyCallback {
     private lateinit var mNaverMap: NaverMap
     private lateinit var mMapView: MapView
     private lateinit var mLocationSource: FusedLocationSource
+    private lateinit var mFusedLocationClient: FusedLocationProviderClient
 
     private lateinit var mMainInfoConstraint: ConstraintLayout
     private lateinit var mMainInfoTvTitle: TextView
@@ -78,6 +83,8 @@ class MapFragment(context: Context) : Fragment(), OnMapReadyCallback {
         mLocationSource =
             FusedLocationSource(activity as MainActivity, LOCATION_PERMISSION_REQUEST_CODE)
 
+        mFusedLocationClient = LocationServices.getFusedLocationProviderClient(requireContext())
+
         //가게 데이터 세팅
         dataSetting()
 
@@ -95,12 +102,6 @@ class MapFragment(context: Context) : Fragment(), OnMapReadyCallback {
         uiSetting.isZoomControlEnabled = true
         uiSetting.isLocationButtonEnabled = false
         mMainLocationBtn.map = mNaverMap
-
-        /*
-        val cameraUpdate = CameraUpdate.scrollTo(LatLng(33.50692329999986, 126.4888091000001))
-            .animate(CameraAnimation.Fly, 1000)
-        mNaverMap.moveCamera(cameraUpdate)
-        */
 
         val infoWindow = InfoWindow()
         infoWindow.adapter = object : InfoWindow.DefaultTextAdapter(mContext) {
@@ -157,6 +158,37 @@ class MapFragment(context: Context) : Fragment(), OnMapReadyCallback {
             permissions,
             LOCATION_PERMISSION_REQUEST_CODE
         )
+
+        if (ActivityCompat.checkSelfPermission(
+                mContext,
+                Manifest.permission.ACCESS_FINE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
+                mContext,
+                Manifest.permission.ACCESS_COARSE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return
+        }
+
+        var currentLocation: Location?
+        mFusedLocationClient.lastLocation.addOnSuccessListener { location: Location? ->
+            currentLocation = location
+
+            val cameraUpdate = CameraUpdate.scrollTo(
+                LatLng(
+                    currentLocation!!.latitude,
+                    currentLocation!!.longitude
+                )
+            )
+            mNaverMap.moveCamera(cameraUpdate)
+        }
     }
 
     override fun onRequestPermissionsResult(
@@ -269,15 +301,15 @@ class MapFragment(context: Context) : Fragment(), OnMapReadyCallback {
         mShopList.add(Shop(77, "넉둥베기", 2, "33.50984174317203", "126.51261223697749", "제주도"))
         mShopList.add(Shop(78, "도토리키친 본점", 2, "33.5153828699007", "126.51859575755903", "제주도"))
         mShopList.add(Shop(79, "천짓골식당", 1, "33.24821720393972", "126.5612495985375", "제주도"))
-        mShopList.add(Shop(80, "체면", 3,"33.24831343440119", "126.28435986910745", "제주도"))
+        mShopList.add(Shop(80, "체면", 3, "33.24831343440119", "126.28435986910745", "제주도"))
 
-        mShopList.add(Shop(81, "제주약수터 본점", 8,"33.24774980214562", "126.56165969322575", "제주도"))
-        mShopList.add(Shop(82, "자리돔횟집", 10,"33.25554877919941", "126.57460582301924", "제주도"))
-        mShopList.add(Shop(83, "표선수산마트", 10,"33.325391996883496", "126.83597669586594", "제주도"))
-        mShopList.add(Shop(84, "중문수두리보말칼국수", 2,"33.25156408181898", "126.42498871468118", "제주도"))
-        mShopList.add(Shop(85, "제일수산횟집", 10,"33.251384430168166", "126.56042680397935", "제주도"))
-        mShopList.add(Shop(86, "돈사돈 본관", 1,"33.47887516893701", "126.4640136066572", "제주도"))
-        mShopList.add(Shop(87, "옥돔식당", 2,"33.219963817821245", "126.24899896573044", "제주도"))
+        mShopList.add(Shop(81, "제주약수터 본점", 8, "33.24774980214562", "126.56165969322575", "제주도"))
+        mShopList.add(Shop(82, "자리돔횟집", 10, "33.25554877919941", "126.57460582301924", "제주도"))
+        mShopList.add(Shop(83, "표선수산마트", 10, "33.325391996883496", "126.83597669586594", "제주도"))
+        mShopList.add(Shop(84, "중문수두리보말칼국수", 2, "33.25156408181898", "126.42498871468118", "제주도"))
+        mShopList.add(Shop(85, "제일수산횟집", 10, "33.251384430168166", "126.56042680397935", "제주도"))
+        mShopList.add(Shop(86, "돈사돈 본관", 1, "33.47887516893701", "126.4640136066572", "제주도"))
+        mShopList.add(Shop(87, "옥돔식당", 2, "33.219963817821245", "126.24899896573044", "제주도"))
 
         mMainInfoIvNavigate.setOnClickListener {
 

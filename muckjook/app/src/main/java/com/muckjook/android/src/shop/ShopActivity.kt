@@ -8,7 +8,7 @@ import androidx.databinding.DataBindingUtil
 import com.muckjook.android.R
 import com.muckjook.android.databinding.ActivityShopDetailBinding
 
-class ShopActivity : AppCompatActivity(), View.OnClickListener {
+class ShopActivity : AppCompatActivity() {
 
     private lateinit var mBinding: ActivityShopDetailBinding
     private val model: ShopViewModel by viewModels()
@@ -22,12 +22,4 @@ class ShopActivity : AppCompatActivity(), View.OnClickListener {
 
     }
 
-    override fun onClick(v: View?) {
-        when(v?.id){
-            R.id.shop_detail_iv_back-> {
-                finish()
-            }
-
-        }
-    }
 }

@@ -9,23 +9,27 @@ import com.muckjook.android.R
 import com.muckjook.android.databinding.ActivitySearchBinding
 import com.muckjook.android.databinding.ActivityShopDetailBinding
 
-class SearchActivity : AppCompatActivity(), View.OnClickListener {
+class SearchActivity : AppCompatActivity() {
 
     private lateinit var mBinding: ActivitySearchBinding
+    private var mKeyword:String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_search)
         mBinding.lifecycleOwner = this
+        mBinding.search = this@SearchActivity
 
 
 
     }
 
-    override fun onClick(v: View?) {
-        when(v?.id){
+    fun search(){
 
-
-        }
     }
+
+    fun back(){
+        finish()
+    }
+
 }

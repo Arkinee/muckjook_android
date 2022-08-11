@@ -21,3 +21,8 @@ Pattern: MVVM
 - viewpager2 : home, mypage fragment added
 - jeju data complete
 - search activity add
+
+#220811
+- search page layout setting
+- recyclerview added
+- search item wrote
