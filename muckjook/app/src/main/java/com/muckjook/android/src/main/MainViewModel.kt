@@ -1,10 +1,11 @@
 package com.muckjook.android.src.main
 
 import android.app.Application
+import androidx.annotation.LayoutRes
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.muckjook.android.R
 import com.muckjook.android.src.db.AppDatabase
 import com.muckjook.android.src.db.Repository
 import com.muckjook.android.src.db.ShopEntity
@@ -31,3 +32,11 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     }
 
 }
+
+interface ItemViewModel {
+    @get:LayoutRes
+    val layoutId: Int
+    val viewType: Int
+        get() = 0
+}
+

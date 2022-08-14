@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         //super.onBackPressed()
-        if (System.currentTimeMillis() - mBackTime < 1500){
+        if (System.currentTimeMillis() - mBackTime < 1500) {
             finish()
             return
         }

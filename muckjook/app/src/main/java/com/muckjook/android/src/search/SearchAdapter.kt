@@ -1,28 +1,43 @@
 package com.muckjook.android.src.search
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
-import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
-import com.muckjook.android.R
+import com.muckjook.android.databinding.ItemSearchResultBinding
+import com.muckjook.android.src.search.model.SearchShop
 
-class SearchAdapter(context:Context): RecyclerView.Adapter<SearchAdapter.SearchViewHolder>() {
+class SearchAdapter() :
+    RecyclerView.Adapter<SearchAdapter.SearchViewHolder>() {
 
-    var dataList = mutableListOf<SearchShop>()
-    inner class SearchViewHolder(private val binding: ViewDataBinding):RecyclerView.ViewHolder(binding.root){
+    var searchList = ArrayList<SearchShop>()
 
-        fun bind(shop:SearchShop){
-            binding.
-        }
-
+    // 어떤 xml으로 뷰 홀더를 생성할지 지정
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SearchViewHolder {
+        val binding =
+            ItemSearchResultBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return SearchViewHolder(binding)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SearchViewHolder {
-        val layoutInflater = LayoutInflater.from(parent.context)
-        val binding = DataBindingUtil.inflate(layoutInflater, R.layout.item_search_result, parent, false)
-        return SearchViewHolder(binding)
+    // 뷰 홀더의 개수 리턴
+    override fun getItemCount(): Int = searchList.size
+
+    // 뷰 홀더에 데이터 바인딩
+    override fun onBindViewHolder(holder: SearchViewHolder, position: Int) {
+        holder.bind(searchList[position])
+    }
+
+    override fun getItemId(position: Int): Long {
+        return position.toLong()
+    }
+
+    // 생성된 뷰 홀더에 값 지정
+    class SearchViewHolder(val binding: ItemSearchResultBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+
+        fun bind(searchShop: SearchShop) {
+            binding.shop = searchShop
+        }
+
     }
 
 }

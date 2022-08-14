@@ -1,4 +1,4 @@
-package com.muckjook.android.src.search
+package com.muckjook.android.src.search.model
 
 data class SearchShop(
     val idx: Int,
@@ -7,5 +7,6 @@ data class SearchShop(
     val category: Int,
     val latitude: String,
     val longitude: String,
-    val region: String
+    val region: String,
+    val address: String
 )

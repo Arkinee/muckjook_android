@@ -26,3 +26,6 @@ Pattern: MVVM
 - search page layout setting
 - recyclerview added
 - search item wrote
+
+#220814
+- recyclerview data binding, not completed
