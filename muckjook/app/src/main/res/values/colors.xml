@@ -11,4 +11,8 @@
     <color name="colorPrimary">#512BD4</color>
     <color name="colorSplashTitle">#000000</color>
     <color name="colorViewBorder">#f9f9f9</color>
+
+    <color name="colorViewBorderGray">#c8c8c8</color>
+    <color name="colorTextGray">7d7d7d</color>
+
 </resources>

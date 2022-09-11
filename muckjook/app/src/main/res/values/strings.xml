@@ -18,6 +18,9 @@
 
     <!-- 가게 상세보기 -->
     <string name="shop_detail_tv_top">먹죽 상세보기</string>
+    <string name="shop_detail_tv_information_1">상세정보</string>
+    <string name="shop_detail_tv_information_name_word">가게명</string>
+    <string name="shop_detail_tv_information_address_word">주소</string>
 
     <!-- 마이페이지 -->
     <string name="mypage_tv_top">마이페이지</string>

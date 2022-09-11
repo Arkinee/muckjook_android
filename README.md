@@ -29,3 +29,7 @@ Pattern: MVVM
 
 #220814
 - recyclerview data binding, not completed
+
+#220911
+- shop detail components added
+	- top rv, information text wording
