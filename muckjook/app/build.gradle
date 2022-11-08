@@ -1,8 +1,11 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
-apply plugin: 'kotlin-kapt'
+
 android {
     compileSdk 32
 
@@ -30,21 +33,19 @@ android {
         jvmTarget = '1.8'
     }
 
-    viewBinding{
-        enabled = true
+    buildFeatures {
+        dataBinding true
+        viewBinding true
     }
-
-    dataBinding{
-        enabled = true
-    }
-
 }
 
 dependencies {
+    implementation project(':data')
+    implementation project(':domain')
 
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.4.2'
-    implementation 'com.google.android.material:material:1.4.0'
+    implementation (KTX.CORE)
+    implementation (AndroidX.APP_COMPAT)
+    implementation (Google.MATERIAL)
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
@@ -57,22 +58,35 @@ dependencies {
     androidTestImplementation "androidx.room:room-testing:$roomVersion"
 
     // Kotlin components
+    def kotlin_version = "1.6.10"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+
+    //coroutines
     def coroutines = '1.3.4'
-    def kotlin_version = "1.3.72"
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation (Coroutines.COROUTINES)
     api "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines"
-    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines"
+
+    //dagger hilt
+    implementation (DaggerHilt.DAGGER_HILT)
+    kapt (DaggerHilt.DAGGER_HILT_COMPILER)
+    implementation (DaggerHilt.DAGGER_HILT_VIEW_MODEL)
+    kapt (DaggerHilt.DAGGER_HILT_ANDROIDX_COMPILER)
+
+    //datastore
+    implementation (AndroidX.DATASTORE)
 
     // Lifecycle components
     def archLifecycleVersion = '2.2.0'
     implementation "androidx.lifecycle:lifecycle-extensions:$archLifecycleVersion"
     kapt "androidx.lifecycle:lifecycle-compiler:$archLifecycleVersion"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$archLifecycleVersion"
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
-    implementation 'androidx.room:room-runtime:2.3.0'
+    implementation (AndroidX.LIFECYCLE_VIEW_MODEL)
+    implementation (AndroidX.LIFECYCLE_LIVEDATA)
+    implementation (AndroidX.FRAGMENT)
+    implementation (NavComponent.NAVIGATION_FRAGMENT)
+    implementation (NavComponent.NAVIGATION_UI)
+    implementation (NavComponent.NAVIGATION_DYNAMIC_FEATURES_FRAGMENT)
+    androidTestImplementation (NavComponent.NAVIGATION_TESTING)
+    implementation (NavComponent.NAVIGATION_COMPOSE)
 
     //permission
     implementation 'io.github.ParkSangGwon:tedpermission-rx3:3.3.0'
@@ -80,15 +94,20 @@ dependencies {
     //Naver Map
     implementation 'com.naver.maps:map-sdk:3.15.0'
 
-    //network
-    implementation 'com.squareup.retrofit2:retrofit:2.6.2'
-    implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
+    //Retrofit
+    implementation (Retrofit.RETROFIT)
+    implementation (Retrofit.CONVERTER_GSON)
+    implementation (Retrofit.CONVERTER_JAXB)
+
+    //okHttp
+    implementation (OkHttp.OKHTTP)
+    implementation (OkHttp.LOGGING_INTERCEPTOR)
 
     //location
-    implementation 'com.google.android.gms:play-services-location:20.0.0'
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
 
     //Glide
-    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
     kapt 'com.github.bumptech.glide:compiler:4.11.0'
 
 }

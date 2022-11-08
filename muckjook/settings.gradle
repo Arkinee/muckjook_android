@@ -17,3 +17,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "MuckJook"
 include ':app'
+include ':domain'
+include ':data'
