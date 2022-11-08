@@ -3,36 +3,36 @@ Muck Jook Android Application
 language: Kotlin
 Development Design Pattern: Clean Architecture, MVVM, AAC
 
-## ±âÈ¹
-'¸Ô°í Á×Àº ³à¼®µé'
-µ¿³× Ä£±¸µé°ú ¸Å´Ş ¸ÀÁıÀ» Ã£¾Æ´Ù´Ï¸ç Æò°¡¸¦ ÇÏ°í ¼­·Î ¸®ºä¸¦ °øÀ¯ÇÏ´Â °úÁ¤À» ¾ÛÀ¸·Î ½ÂÈ­½ÃÅ² ¼­ºñ½ºÀÔ´Ï´Ù.
+## ê¸°íš
+'ë¨¹ê³  ì£½ì€ ë…€ì„ë“¤'
+ë™ë„¤ ì¹œêµ¬ë“¤ê³¼ ë§¤ë‹¬ ë§›ì§‘ì„ ì°¾ì•„ë‹¤ë‹ˆë©° í‰ê°€ë¥¼ í•˜ê³  ì„œë¡œ ë¦¬ë·°ë¥¼ ê³µìœ í•˜ëŠ” ê³¼ì •ì„ ì•±ìœ¼ë¡œ ìŠ¹í™”ì‹œí‚¨ ì„œë¹„ìŠ¤ì…ë‹ˆë‹¤.
 
-## °³¹ß ¸ñÀû
-- ¾Èµå·ÎÀÌµå Clean Architecture ±â¹İÀÇ ¼ÒÇÁÆ®¿ş¾î °³¹ß »çÀÌµå ÇÁ·ÎÁ§Æ®
-- Kotlin + MVVM + AAC °³ÀÎ ½ºÅÍµğ
+## ê°œë°œ ëª©ì 
+- ì•ˆë“œë¡œì´ë“œ Clean Architecture ê¸°ë°˜ì˜ ì†Œí”„íŠ¸ì›¨ì–´ ê°œë°œ ì‚¬ì´ë“œ í”„ë¡œì íŠ¸
+- Kotlin + MVVM + AAC ê°œì¸ ìŠ¤í„°ë””
 
 ## Android Clean Architecture base structures apply
 
 ### App(Presentation Layer)
-- base: BaseActivity, BaseFragment, µî Base°¡ µÇ´Â ÆÄÀÏ
-- di: Dependency Inejction °ü·Ã module ÆÄÀÏ µîÀÌ À§Ä¡. dagger hilt »ç¿ë
-- view: Activity¿Í Fragment µî view¿¡ °ü·ÃµÈ ÆÄÀÏµéÀÌ À§Ä¡.
-- viewmodel: viewModel ÆÄÀÏµéÀÌ À§Ä¡
-- widget: extension(ÄÚÆ²¸° È®Àå ÇÔ¼ö), utils µîÀÇ ÆÄÀÏ À§Ä¡
+- base: BaseActivity, BaseFragment, ë“± Baseê°€ ë˜ëŠ” íŒŒì¼
+- di: Dependency Inejction ê´€ë ¨ module íŒŒì¼ ë“±ì´ ìœ„ì¹˜. dagger hilt ì‚¬ìš©
+- view: Activityì™€ Fragment ë“± viewì— ê´€ë ¨ëœ íŒŒì¼ë“¤ì´ ìœ„ì¹˜.
+- viewmodel: viewModel íŒŒì¼ë“¤ì´ ìœ„ì¹˜
+- widget: extension(ì½”í‹€ë¦° í™•ì¥ í•¨ìˆ˜), utils ë“±ì˜ íŒŒì¼ ìœ„ì¹˜
 
 ### Domain Layer
-- model: Response data class°¡ À§Ä¡
-- repository: data repositoryÀÇ ½ÇÁ¦ ±¸ÇöÃ¼°¡ ÀÌ°Í¿¡ À§Ä¡(interface)
-- usecase: °¢°¢ÀÇ ±â´Éº°·Î ¼¼ºĞÈ­µÈ usecase°¡ À§Ä¡
-- utils: ÀÚÁÖ ¾²´Â ÇÔ¼ö³ª º¯¼ö µîÀÌ À§Ä¡
+- model: Response data classê°€ ìœ„ì¹˜
+- repository: data repositoryì˜ ì‹¤ì œ êµ¬í˜„ì²´ê°€ ì´ê²ƒì— ìœ„ì¹˜(interface)
+- usecase: ê°ê°ì˜ ê¸°ëŠ¥ë³„ë¡œ ì„¸ë¶„í™”ëœ usecaseê°€ ìœ„ì¹˜
+- utils: ìì£¼ ì“°ëŠ” í•¨ìˆ˜ë‚˜ ë³€ìˆ˜ ë“±ì´ ìœ„ì¹˜
 
 ### Data Layer
-- db: local db¿¡ °ü·ÃµÈ roomµîÀÇ ÆÄÀÏÀÌ À§Ä¡
-- mapper: data ¸ğµâÀÇ response data class¸¦ domain ¸ğµâÀÇ response data class·Î ¹Ù²ãÁÖ´Â ÆÄÀÏÀÌ À§Ä¡
-- remote: api, response model µîÀÇ ÆÄÀÏÀÌ À§Ä¡
-- repository: datasource¿Í domainÀÇ repositoryÀÇ implement ÆÄÀÏÀÌ À§Ä¡
-- utils: base µî ÀÚÁÖ ¾²´Â ÇÔ¼ö³ª º¯¼ö µîÀÇ ÆÄÀÏÀÌ À§Ä¡
+- db: local dbì— ê´€ë ¨ëœ roomë“±ì˜ íŒŒì¼ì´ ìœ„ì¹˜
+- mapper: data ëª¨ë“ˆì˜ response data classë¥¼ domain ëª¨ë“ˆì˜ response data classë¡œ ë°”ê¿”ì£¼ëŠ” íŒŒì¼ì´ ìœ„ì¹˜
+- remote: api, response model ë“±ì˜ íŒŒì¼ì´ ìœ„ì¹˜
+- repository: datasourceì™€ domainì˜ repositoryì˜ implement íŒŒì¼ì´ ìœ„ì¹˜
+- utils: base ë“± ìì£¼ ì“°ëŠ” í•¨ìˆ˜ë‚˜ ë³€ìˆ˜ ë“±ì˜ íŒŒì¼ì´ ìœ„ì¹˜
 
 ---
 #### To-Do List
-[ ] view, viewmodel ºÎºĞ ºĞ¸®ÇÏ±â
+ [ ] view, viewmodel ë¶€ë¶„ ë¶„ë¦¬í•˜ê¸°
