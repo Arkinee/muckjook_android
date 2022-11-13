@@ -1,9 +1,9 @@
-package com.muckjook.android.src.splash
+package com.muckjook.android.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class SplashViewModel():ViewModel() {
+class ShopViewModel():ViewModel() {
 
     var count = MutableLiveData<Int>()
     init {

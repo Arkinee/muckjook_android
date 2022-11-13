@@ -1,4 +1,4 @@
-# muckjook_android
+﻿# muckjook_android
 Muck Jook Android Application
 language: Kotlin
 Development Design Pattern: Clean Architecture, MVVM, AAC
@@ -36,3 +36,5 @@ Development Design Pattern: Clean Architecture, MVVM, AAC
 ---
 #### To-Do List
 - [ ] view, viewmodel 부분 분리하기
+- [ ] DI 공부
+- [ ] RecyclerView Databinding, adapter setting

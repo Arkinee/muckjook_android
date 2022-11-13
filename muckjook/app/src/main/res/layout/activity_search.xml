@@ -6,7 +6,8 @@
     <data>
         <variable
             name="viewModel"
-            type="com.muckjook.android.src.search.SearchViewModel" />
+            type="com.muckjook.android.view.search.SearchActivity" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -86,6 +87,7 @@
                 android:layout_height="0dp"
                 android:padding="5dp"
                 android:src="@drawable/ic_search_accent"
+                android:onClick="@{viewModel::search}"
                 app:layout_constraintBottom_toBottomOf="@+id/search_edt_keyword"
                 app:layout_constraintDimensionRatio="1:1"
                 app:layout_constraintEnd_toEndOf="@+id/search_edt_keyword"
@@ -100,7 +102,7 @@
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="25dp"
             android:layout_marginBottom="15dp"
-            app:items="@{viewModel.searchList}"
+            app:setAdapter="@{}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintTop_toBottomOf="@+id/search_constraint_keyword"
             tools:listitem="@layout/item_search_result" />

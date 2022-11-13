@@ -1,12 +1,12 @@
-package com.muckjook.android.src.shop
+package com.muckjook.android.view
 
 import android.os.Bundle
-import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.muckjook.android.R
 import com.muckjook.android.databinding.ActivityShopDetailBinding
+import com.muckjook.android.viewmodel.ShopViewModel
 
 class ShopActivity : AppCompatActivity() {
 

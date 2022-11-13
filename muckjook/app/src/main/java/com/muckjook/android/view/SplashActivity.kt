@@ -1,4 +1,4 @@
-package com.muckjook.android.src.splash
+package com.muckjook.android.view
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,6 +10,7 @@ import androidx.databinding.DataBindingUtil
 import com.muckjook.android.R
 import com.muckjook.android.databinding.ActivitySplashBinding
 import com.muckjook.android.src.main.MainActivity
+import com.muckjook.android.viewmodel.SplashViewModel
 
 class SplashActivity : AppCompatActivity() {
 

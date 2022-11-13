@@ -1,4 +1,4 @@
-package com.muckjook.android.src.search
+package com.muckjook.android.view.search
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -28,6 +28,12 @@ class SearchAdapter() :
 
     override fun getItemId(position: Int): Long {
         return position.toLong()
+    }
+
+    fun setItems(items: ArrayList<SearchShop>){
+        this.searchList.clear()
+        this.searchList.addAll(items)
+        notifyDataSetChanged()
     }
 
     // 생성된 뷰 홀더에 값 지정

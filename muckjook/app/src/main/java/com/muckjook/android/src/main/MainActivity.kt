@@ -14,7 +14,7 @@ import com.muckjook.android.databinding.ActivityMainBinding
 import com.muckjook.android.src.main.adapters.MainViewPagerAdapter
 import com.muckjook.android.src.main.fragments.map.MapFragment
 import com.muckjook.android.src.main.fragments.mypage.MyPageFragment
-import com.muckjook.android.src.search.SearchActivity
+import com.muckjook.android.view.search.SearchActivity
 
 class MainActivity : AppCompatActivity() {
 

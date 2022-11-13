@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="com.muckjook.android.src.splash.SplashViewModel" />
+            type="com.muckjook.android.viewmodel.SplashViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

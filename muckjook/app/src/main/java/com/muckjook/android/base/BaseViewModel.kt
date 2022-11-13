@@ -16,6 +16,11 @@ abstract class BaseViewModel : ViewModel(), RemoteErrorEmitter {
     val mutableSuccessMessage = MutableLiveData<String>()
     val mutableErrorType = SingleLiveEvent<ErrorType>()
 
+    override fun onError(msg: String) {
+        mutableErrorMessage.postValue(msg)
+    }
 
-
+    override fun onError(errorType: ErrorType) {
+        mutableErrorType.postValue(errorType)
+    }
 }
