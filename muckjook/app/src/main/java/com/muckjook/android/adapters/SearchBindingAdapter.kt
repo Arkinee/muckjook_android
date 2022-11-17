@@ -1,4 +1,4 @@
-package com.muckjook.android.src.search
+package com.muckjook.android.adapters
 
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
@@ -7,7 +7,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
 import com.muckjook.android.R
-import com.muckjook.android.src.search.model.SearchShop
+import com.muckjook.domain.model.SearchShop
 import com.muckjook.android.view.search.SearchAdapter
 
 object SearchBindingAdapter {

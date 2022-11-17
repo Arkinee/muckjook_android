@@ -1,11 +1,8 @@
 package com.muckjook.android.viewmodel
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.muckjook.android.base.BaseViewModel
-import com.muckjook.android.src.search.model.SearchShop
 import com.muckjook.android.widget.utils.ScreenState
 import com.muckjook.android.widget.utils.SingleLiveEvent
 import com.muckjook.domain.model.StoreResponse

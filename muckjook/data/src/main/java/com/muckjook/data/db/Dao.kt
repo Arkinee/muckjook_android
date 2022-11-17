@@ -1,4 +1,4 @@
-package com.muckjook.android.src.db
+package com.muckjook.data.db
 
 import androidx.lifecycle.LiveData
 import androidx.room.*

@@ -1,14 +1,14 @@
-package com.muckjook.android.src.main.interfaces
+package com.muckjook.data.db
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.muckjook.android.src.db.ShopEntity
+import androidx.room.Dao
 
 @Dao
 interface MainDaoInterface {
 
     // 데이터 베이스 불러오기
-    @Query("SELECT * from user_table ORDER BY id ASC")
+    @Query("SELECT * from shop_table ORDER BY id ASC")
     fun getAll(): LiveData<List<ShopEntity>>
 
     // 데이터 추가

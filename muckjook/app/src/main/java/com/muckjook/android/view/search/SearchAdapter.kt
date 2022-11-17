@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.muckjook.android.databinding.ItemSearchResultBinding
-import com.muckjook.android.src.search.model.SearchShop
+import com.muckjook.domain.model.SearchShop
 
 class SearchAdapter() :
     RecyclerView.Adapter<SearchAdapter.SearchViewHolder>() {

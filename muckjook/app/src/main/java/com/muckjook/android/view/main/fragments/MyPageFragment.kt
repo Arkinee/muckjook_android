@@ -1,4 +1,4 @@
-package com.muckjook.android.src.main.fragments.mypage
+package com.muckjook.android.view.main.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

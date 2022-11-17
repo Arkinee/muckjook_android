@@ -35,6 +35,6 @@ Development Design Pattern: Clean Architecture, MVVM, AAC
 
 ---
 #### To-Do List
-- [ ] view, viewmodel 부분 분리하기
+- [x] view, viewmodel 부분 분리하기
 - [ ] DI 공부
 - [ ] RecyclerView Databinding, adapter setting

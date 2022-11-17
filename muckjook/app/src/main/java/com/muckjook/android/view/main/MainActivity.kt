@@ -1,4 +1,4 @@
-package com.muckjook.android.src.main
+package com.muckjook.android.view.main
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,9 +11,10 @@ import androidx.databinding.DataBindingUtil
 import androidx.viewpager2.widget.ViewPager2
 import com.muckjook.android.R
 import com.muckjook.android.databinding.ActivityMainBinding
-import com.muckjook.android.src.main.adapters.MainViewPagerAdapter
-import com.muckjook.android.src.main.fragments.map.MapFragment
-import com.muckjook.android.src.main.fragments.mypage.MyPageFragment
+import com.muckjook.android.src.main.MainViewModel
+import com.muckjook.android.adapters.MainViewPagerAdapter
+import com.muckjook.android.view.main.fragments.MapFragment
+import com.muckjook.android.view.main.fragments.MyPageFragment
 import com.muckjook.android.view.search.SearchActivity
 
 class MainActivity : AppCompatActivity() {

@@ -5,10 +5,9 @@ import androidx.annotation.LayoutRes
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
-import com.muckjook.android.R
-import com.muckjook.android.src.db.AppDatabase
-import com.muckjook.android.src.db.Repository
-import com.muckjook.android.src.db.ShopEntity
+import com.muckjook.data.db.AppDatabase
+import com.muckjook.data.db.Repository
+import com.muckjook.data.db.ShopEntity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

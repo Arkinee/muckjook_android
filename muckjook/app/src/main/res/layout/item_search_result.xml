@@ -6,7 +6,7 @@
     <data>
         <variable
             name="shop"
-            type="com.muckjook.android.src.search.model.SearchShop" />
+            type="com.muckjook.domain.model.SearchShop" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

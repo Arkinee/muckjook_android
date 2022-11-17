@@ -1,4 +1,4 @@
-package com.muckjook.android.src.db
+package com.muckjook.data.db
 
 import android.content.Context
 import androidx.room.Database

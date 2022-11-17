@@ -1,4 +1,4 @@
-package com.muckjook.android.src.main.fragments.map
+package com.muckjook.android.view.main.fragments
 
 import android.Manifest
 import android.content.Context
@@ -20,8 +20,8 @@ import androidx.fragment.app.Fragment
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.muckjook.android.R
-import com.muckjook.android.src.main.MainActivity
-import com.muckjook.android.src.main.Shop
+import com.muckjook.android.view.main.MainActivity
+import com.muckjook.domain.model.Shop
 import com.naver.maps.geometry.LatLng
 import com.naver.maps.map.*
 import com.naver.maps.map.overlay.InfoWindow

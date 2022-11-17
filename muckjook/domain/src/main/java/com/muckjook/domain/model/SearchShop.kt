@@ -1,4 +1,4 @@
-package com.muckjook.android.src.search.model
+package com.muckjook.domain.model
 
 data class SearchShop(
     val idx: Int,

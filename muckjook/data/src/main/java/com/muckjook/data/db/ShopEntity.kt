@@ -1,4 +1,4 @@
-package com.muckjook.android.src.db
+package com.muckjook.data.db
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -7,5 +7,4 @@ import androidx.room.PrimaryKey
 data class ShopEntity(
     @PrimaryKey(autoGenerate = true)
     val id: Int, var name: String, var type: String, val latitude : Long, val longitude : Long){
-
 }

@@ -1,4 +1,4 @@
-package com.muckjook.android.src.main
+package com.muckjook.domain.model
 
 data class Shop(
     val id: Int,

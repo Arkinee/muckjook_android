@@ -33,7 +33,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".src.main.MainActivity" />
+        <activity android:name=".view.main.MainActivity" />
         <activity android:name=".view.search.SearchActivity" />
         <activity android:name=".view.ShopActivity" />
 
