@@ -1,4 +1,4 @@
-package com.muckjook.android.view.search
+package com.muckjook.android.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

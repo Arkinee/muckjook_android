@@ -8,7 +8,6 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
 import com.muckjook.android.R
 import com.muckjook.domain.model.SearchShop
-import com.muckjook.android.view.search.SearchAdapter
 
 object SearchBindingAdapter {
     @BindingAdapter("items")

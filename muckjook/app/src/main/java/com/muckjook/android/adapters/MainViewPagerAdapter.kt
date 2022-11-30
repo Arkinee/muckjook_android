@@ -5,8 +5,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.muckjook.android.view.main.fragments.MapFragment
-import com.muckjook.android.view.main.fragments.MyPageFragment
+import com.muckjook.android.view.fragments.MapFragment
+import com.muckjook.android.view.fragments.MyPageFragment
 
 class MainViewPagerAdapter(
     context: Context,

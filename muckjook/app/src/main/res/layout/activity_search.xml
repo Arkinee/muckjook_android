@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.muckjook.android.view.search.SearchActivity" />
+            type="com.muckjook.android.view.SearchActivity" />
 
     </data>
 

@@ -1,8 +1,9 @@
-package com.muckjook.android.view.search
+package com.muckjook.android.view
 
 import android.view.View
 import androidx.activity.viewModels
 import com.muckjook.android.R
+import com.muckjook.android.adapters.SearchAdapter
 import com.muckjook.android.base.BaseActivity
 import com.muckjook.android.databinding.ActivitySearchBinding
 import com.muckjook.android.viewmodel.SearchViewModel
