@@ -10,7 +10,9 @@ import androidx.databinding.DataBindingUtil
 import com.muckjook.android.R
 import com.muckjook.android.databinding.ActivitySplashBinding
 import com.muckjook.android.viewmodel.SplashViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SplashActivity : AppCompatActivity() {
 
     private lateinit var mBinding: ActivitySplashBinding
