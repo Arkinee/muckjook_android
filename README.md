@@ -34,7 +34,11 @@ Development Design Pattern: Clean Architecture, MVVM, AAC
 - utils: base 등 자주 쓰는 함수나 변수 등의 파일이 위치
 
 ---
+'22.12.04 Project remake
+DI를 적용한 클린 아키텍쳐 모듈 간 에러 발생으로 다중 모듈이 아닌 app 모듈 내에서 패키지로 아키텍쳐를 나눠서 새롭게 만들기로 결정
+
+---
 #### To-Do List
-- [x] view, viewmodel 부분 분리하기
+- [ ] clean architecture 다시 적용
 - [ ] DI 공부
-- [ ] RecyclerView Databinding, adapter setting
+- [ ] RecyclerView with Antonio 학습
